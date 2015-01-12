@@ -74,7 +74,7 @@ public class FlashLightActivity extends Activity {
 				} else {
 
 					Log.i("info", "torch is turn on!");
-					Toast.makeText(FlashLightActivity.this, "torch is turn on!",
+				Toast.makeText(FlashLightActivity.this, "torch is turn on!",
 							Toast.LENGTH_SHORT).show();
 					p.setFlashMode(Parameters.FLASH_MODE_TORCH);
 
