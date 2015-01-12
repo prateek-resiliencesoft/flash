@@ -2,14 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/relativeLayout1"
     android:layout_width="fill_parent"
+    android:background="@drawable/launcher"
     android:layout_height="fill_parent" >
 
-    <Button
-        android:id="@+id/buttonFlashlight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-       	android:layout_centerVertical="true"
-       	android:layout_centerHorizontal="true"
-        android:text="Torch" />
+<!--     <Button -->
+<!--         android:id="@+id/buttonFlashlight" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--        	android:layout_centerVertical="true" -->
+<!--        	android:layout_centerHorizontal="true" -->
+<!--         android:text="Torch" /> -->
 
 </RelativeLayout>

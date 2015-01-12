@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 
@@ -25,6 +26,8 @@ public class FlashLightActivity extends Activity {
 	private Camera camera;
 
 	private Button button;
+	
+	private RelativeLayout relativelayout;
 
 	@Override
 	protected void onStop() {
@@ -40,8 +43,8 @@ public class FlashLightActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		button = (Button) findViewById(R.id.buttonFlashlight);
-
+//		button = (Button) findViewById(R.id.buttonFlashlight);
+		relativelayout=(RelativeLayout)findViewById(R.id.relativeLayout1);
 		Context context = this;
 		PackageManager pm = context.getPackageManager();
 
@@ -56,11 +59,11 @@ public class FlashLightActivity extends Activity {
 		camera = Camera.open();
 		final Parameters p = camera.getParameters();
 
-		button.setOnClickListener(new OnClickListener() {
-
+		relativelayout.setOnClickListener(new OnClickListener() {
+			
 			@Override
-			public void onClick(View arg0) {
-
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
 				if (isLighOn) {
 
 					Log.i("info", "torch is turn off!");
@@ -83,9 +86,40 @@ public class FlashLightActivity extends Activity {
 					isLighOn = true;
 
 				}
-
 			}
 		});
+				
+		
+//		button.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View arg0) {
+//
+//				if (isLighOn) {
+//
+//					Log.i("info", "torch is turn off!");
+//					Toast.makeText(FlashLightActivity.this, "torch is turn off!",
+//							Toast.LENGTH_SHORT).show();
+//					p.setFlashMode(Parameters.FLASH_MODE_OFF);
+//					camera.setParameters(p);
+//					camera.stopPreview();
+//					isLighOn = false;
+//
+//				} else {
+//
+//					Log.i("info", "torch is turn on!");
+//				Toast.makeText(FlashLightActivity.this, "torch is turn on!",
+//							Toast.LENGTH_SHORT).show();
+//					p.setFlashMode(Parameters.FLASH_MODE_TORCH);
+//
+//					camera.setParameters(p);
+//					camera.startPreview();
+//					isLighOn = true;
+//
+//				}
+//
+//			}
+//		});
 
 	}
 }
